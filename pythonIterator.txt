@@ -1,0 +1,25 @@
+__author__ = 'Arvind Nair'
+
+import time
+
+myList = [1]*1000
+it = iter(myList)
+
+start = time.clock();
+iterator = iter(myList)
+sum_of_array = 0
+
+try:
+    while True:
+        item = next(iterator)
+        sum_of_array = sum_of_array + item
+except StopIteration:
+    pass
+finally:
+    del iterator
+
+end = time.clock();
+
+print(sum_of_array)
+
+print((end-start)*1000000)

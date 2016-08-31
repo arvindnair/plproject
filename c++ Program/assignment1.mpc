@@ -1,0 +1,26 @@
+// $Id: assignment1.mpc 378 2010-02-07 22:09:38Z hillj $
+
+
+project (assignment1) {
+   specific (make) {
+    requires += cpp11
+    compile_flags += -std=c++11
+  }
+ exename = assignment1
+ 
+install = .
+ 
+ 
+Source_Files {
+ driver.cpp
+
+}
+
+Template_Files {
+ Linked_List.cpp
+ Linked_List_Iterator.cpp
+ Node.cpp
+
+}
+
+}
